@@ -1,7 +1,10 @@
 # ROS2 Foxy
 FROM ros:foxy
 
-# # This is required else apt-get update throws Hash mismatch error
+# Prevent console from interacting with the user
+ARG DEBIAN_FRONTEND=noninteractive
+
+# This is required else apt-get update throws Hash mismatch error
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* && apt-get update -y
 
 # Set folder for RUNTIME_DIR for RViz2

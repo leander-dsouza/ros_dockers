@@ -1,7 +1,10 @@
 # ROS Noetic
 FROM ros:noetic
 
-# # This is required else apt-get update throws Hash mismatch error
+# Prevent console from interacting with the user
+ARG DEBIAN_FRONTEND=noninteractive
+
+# This is required else apt-get update throws Hash mismatch error
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* && apt-get update -y
 
 # Ensure timeouts are set to a minimum to enable faster exit

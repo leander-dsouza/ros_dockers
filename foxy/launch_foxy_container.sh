@@ -1,7 +1,7 @@
 #!/bin/bash
 xhost +local:root
 
-docker run -it --privileged --net=host \
+docker run -it --privileged \
 --name lsd_foxy_test \
 -v ~/foxy_ws/src:/foxy_ws/src \
 --env="DISPLAY"  \

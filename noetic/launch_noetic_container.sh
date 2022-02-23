@@ -1,7 +1,7 @@
 #!/bin/bash
 xhost +local:root
 
-docker run -it --privileged --net=host \
+docker run -it --privileged \
 --name lsd_noetic_test \
 -v ~/noetic_ws/src:/noetic_ws/src \
 --env="DISPLAY"  \

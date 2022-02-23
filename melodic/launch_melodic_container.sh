@@ -1,7 +1,7 @@
 #!/bin/bash
 xhost +local:root
 
-docker run -it --privileged --net=host \
+docker run -it --privileged \
 --name lsd_melodic_test \
 -v ~/melodic_ws/src:/melodic_ws/src \
 --env="DISPLAY"  \
