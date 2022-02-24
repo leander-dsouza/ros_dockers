@@ -1,5 +1,5 @@
-# ROS kinetic
-FROM ros:Kinetic
+# ROS Kinetic
+FROM ros:kinetic
 
 # Prevent console from interacting with the user
 ARG DEBIAN_FRONTEND=noninteractive
