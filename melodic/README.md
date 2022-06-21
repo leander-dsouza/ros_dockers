@@ -2,7 +2,7 @@
 
 ## Tutorial
 
-* Clone all the melodic-compatible repositories at `~/melodic_ws`.
+* Clone all the melodic-compatible repositories at `~/workspaces/melodic_ws`.
 <br/>The `launch_docker_container.sh` script will generate a symlink connecting all these repositories to container. In this way, editing the source code of any repository will automatically update the container, and reduce the software bloat on it.
 
 * Build the Dockerfile in the repository:

@@ -2,7 +2,7 @@
 
 ## Tutorial
 
-* Clone all the kinetic-compatible repositories at `~/kinetic_ws`.
+* Clone all the kinetic-compatible repositories at `~/workspaces/kinetic_ws`.
 <br/>The `launch_docker_container.sh` script will generate a symlink connecting all these repositories to container. In this way, editing the source code of any repository will automatically update the container, and reduce the software bloat on it.
 
 * Build the Dockerfile in the repository:
