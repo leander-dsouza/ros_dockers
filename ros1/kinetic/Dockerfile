@@ -1,5 +1,5 @@
-# ROS Noetic
-FROM ros:noetic
+# ROS Kinetic
+FROM ros:kinetic
 
 # Prevent console from interacting with the user
 ARG DEBIAN_FRONTEND=noninteractive
@@ -8,16 +8,17 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* && apt-get update -y
 
 # Ensure timeouts are set to a minimum to enable faster exit
-RUN sed -i -e 's/_TIMEOUT_SIGINT  = 15.0/_TIMEOUT_SIGINT  = 1e-323/g' \
-    -e 's/_TIMEOUT_SIGTERM = 2.0/_TIMEOUT_SIGTERM = 1e-323/g' \
-    /opt/ros/noetic/lib/python3/dist-packages/roslaunch/nodeprocess.py
+RUN sed -i -e 's/_TIMEOUT_SIGINT  = 15.0/_TIMEOUT_SIGINT  = 0.0/g' \
+    -e 's/_TIMEOUT_SIGTERM = 2.0/_TIMEOUT_SIGTERM = 0.0/g' \
+    /opt/ros/kinetic/lib/python2.7/dist-packages/roslaunch/nodeprocess.py
 
 # Set folder for RUNTIME_DIR for RViz
 RUN mkdir tmp/runtime-root && chmod 0700 tmp/runtime-root
 ENV XDG_RUNTIME_DIR='/tmp/runtime-root'
 
-# Install RViz and Gazebo
+# Install catkin_tools for catkin build, RViz and Gazebo
 RUN apt-get install -y \
+    python-catkin-tools \
     ros-$ROS_DISTRO-rviz \
     ros-$ROS_DISTRO-gazebo-ros
 
@@ -32,7 +33,7 @@ RUN apt-get install -y \
 
 # Python Dependencies
 # RUN apt-get install -y \
-#     python3-pip
+#     python-pip
 
 # ROS Dependencies
 # RUN apt-get install -y \

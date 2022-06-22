@@ -16,8 +16,9 @@ RUN sed -i -e 's/_TIMEOUT_SIGINT  = 15.0/_TIMEOUT_SIGINT  = 0.0/g' \
 RUN mkdir tmp/runtime-root && chmod 0700 tmp/runtime-root
 ENV XDG_RUNTIME_DIR='/tmp/runtime-root'
 
-# Install RViz and Gazebo
+# Install catkin_tools for catkin build, RViz and Gazebo
 RUN apt-get install -y \
+    python-catkin-tools \
     ros-$ROS_DISTRO-rviz \
     ros-$ROS_DISTRO-gazebo-ros
 
