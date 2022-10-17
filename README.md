@@ -8,11 +8,15 @@ A collection of ROS1 and ROS2 dockers with Gazebo and RViz capabilities.
 
 ## Tutorial
 
- * Keep your code organized as follows:
+ * Run the folder organizing script:
+
+	   ./organize_folders.sh
+
+	This organizes the folders as follows:
 
 	   - ~/workspaces
 		    - ros1/ or ros2/
 				  - distros/
-					  - static_ws/ dynamic_ws/ throwaway_ws/
+					  - static_ws/src dynamic_ws/src throwaway_ws/src
 
 * For further assistance, refer to the subdirectories.
