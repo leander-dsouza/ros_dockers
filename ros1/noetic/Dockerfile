@@ -18,7 +18,7 @@ ENV XDG_RUNTIME_DIR='/tmp/runtime-root'
 
 # Install catkin_tools for catkin build, RViz and Gazebo
 RUN apt-get install --no-install-recommends -yqqq \
-    python-catkin-tools \
+    python3-catkin-tools \
     ros-$ROS_DISTRO-rviz \
     ros-$ROS_DISTRO-gazebo-ros
 
