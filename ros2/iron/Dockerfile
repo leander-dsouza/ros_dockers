@@ -1,5 +1,5 @@
-# ROS2 Humble
-FROM ros:humble
+# ROS2 iron
+FROM ros:iron
 
 # Prevent console from interacting with the user
 ARG DEBIAN_FRONTEND=noninteractive

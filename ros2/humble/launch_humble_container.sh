@@ -8,6 +8,7 @@ docker run -it -d --privileged --net=host \
 -v ~/workspaces/ros2/humble/throwaway_ws/src:/throwaway_ws/src \
 --env="DISPLAY"  \
 --env="QT_X11_NO_MITSHM=1"  \
+--runtime=nvidia \
  lsd_humble:latest
 
 xhost -local:root
