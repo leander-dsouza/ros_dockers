@@ -1,7 +1,7 @@
 #!/bin/bash
 
-ROS1_DISTROS=(kinetic melodic noetic)
-ROS2_DISTROS=(foxy humble)
+ROS1_DISTROS=(noetic)
+ROS2_DISTROS=(jazzy)
 
 for ros1_distro in ${ROS1_DISTROS[@]}; do
   mkdir -p ~/workspaces/ros1/$ros1_distro/static_ws/src
