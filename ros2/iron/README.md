@@ -1,8 +1,8 @@
-# ROS2 Jazzy
+# ROS2 Iron
 
 ## Tutorial
 
-* Clone all the jazzy-compatible repositories at `~/workspaces/ros1/jazzy/$WORKSPACE$_ws/src/`, where `$WORKSPACE$` can be any of the following - `{static_ws, dynamic_ws, throwaway_ws}`.
+* Clone all the iron-compatible repositories at `~/workspaces/ros1/iron/$WORKSPACE$_ws/src/`, where `$WORKSPACE$` can be any of the following - `{static_ws, dynamic_ws, throwaway_ws}`.
 
 * The docker compose [file](docker-compose.yaml) just has some installations for the corresponding rviz and gazebo versions for the specified ros distro. It also includes GPU support.
 
@@ -25,3 +25,4 @@
 * To terminate the docker container:
 
       docker compose down
+1
